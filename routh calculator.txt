@@ -1,0 +1,391 @@
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_MainWindow(object):
+
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(610, 520)
+        MainWindow.setMinimumSize(QtCore.QSize(610, 520))
+        MainWindow.setMaximumSize(QtCore.QSize(610, 520))
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/img/automation.png"), QtGui.QIcon.Normal, QtGui.QIcon.State.Off)
+        MainWindow.setWindowIcon(icon)
+        MainWindow.setToolTip("")
+        MainWindow.setStatusTip("")
+        MainWindow.setStyleSheet("backgroubd-color:rgb(139,10,80);")
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit.setGeometry(QtCore.QRect(10, 350, 591, 31))
+        self.lineEdit.setToolTip("")
+        self.lineEdit.setStyleSheet(
+            "font: 63 italic 14pt \"Segoe UI Semibold\";\n""background-color:rgb(195, 195, 195);")
+        self.lineEdit.setObjectName("lineEdit")
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(50, 400, 221, 61))
+        font = QtGui.QFont()
+        font.setFamily("Arial")
+        font.setPointSize(-1)
+        font.setBold(True)
+        font.setItalic(True)
+        font.setUnderline(False)
+        font.setWeight(75)
+        font.setStrikeOut(False)
+        self.pushButton.setFont(font)
+        self.pushButton.setStyleSheet(".QPushButton{\n"
+                                      "   font : 63 italic 28pt\"Segoe UI Semibold\";\n"
+                                      "   box-shadow: 3px 4px 0px #3dc21b;\n"
+                                      "   background : linear-gradient(to bottom, #44c767 5%, #5cvf2a 100%);\n"
+                                      "   background-color:#44c767;\n"
+                                      "   border-radius:5px;\n"
+                                      "   border:1px solid #18ab29;\n"
+                                      "   display:inline-block;\n"
+                                      "   cursor:pointer;\n"
+                                      "   color:#ffffff;\n"
+                                      "   font-family: Arial;\n"
+                                      "   font-size:21px;\n"
+                                      "   font-weight:bold;\n"
+                                      "   padding:14px 41px;\n"
+                                      "   text-decoration: none;\n"
+                                      "   text-shadow: 0px 1px 6px #2f6627;\n"
+                                      "}\n"
+                                      ".QPushButton:hover{\n"
+                                      "   background:linear-gradient(to bottom, #5cbf2a 5%, #44c767 100%);\n"
+                                      "   background-color:#5cbf2a;\n"
+                                      "}\n"
+                                      ".QPushButton:active{\n"
+                                      "   position:relative;\n"
+                                      "   top:2px;\n"
+                                      "}\n"
+                                      "")
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(":/img/enter.png"), QtGui.QIcon.Normal, QtGui.QIcon.State.Off)
+        self.pushButton.setIcon(icon1)
+        self.pushButton.setIconSize(QtCore.QSize(100, 70))
+        self.pushButton.setObjectName("pushButton")
+        self.textBrowser = QtWidgets.QTextBrowser(self.centralwidget)
+        self.textBrowser.setGeometry(QtCore.QRect(10, 10, 591, 331))
+        font = QtGui.QFont()
+        font.setFamily("Sikta Subheading")
+        font.setPointSize(15)
+        font.setBold(True)
+        font.setWeight(75)
+        self.textBrowser.setFont(font)
+        self.textBrowser.setStyleSheet("background-color:rgb(131,139,139);")
+        self.textBrowser.setObjectName("textBrowser")
+        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_2.setGeometry(QtCore.QRect(330, 400, 231, 61))
+        font = QtGui.QFont()
+        font.setFamily("Arial")
+        font.setPointSize(-1)
+        font.setUnderline(False)
+        font.setStrikeOut(False)
+        self.pushButton_2.setFont(font)
+        self.pushButton_2.setStyleSheet(".QPushButton{\n"
+                                        "    webkit-border-radius:28;\n"
+                                        "    moz-border-radius: 28;\n"
+                                        "    border-radius: 28;\n"
+                                        "    font-family:Arial;\n"
+                                        "    color: #e6e6e6;\n"
+                                        "    font-size: 24px;\n"
+                                        "    background: #9c34d9;\n"
+                                        "    padding: 10px 20px 10px 20px;\n"
+                                        "    text-decoration:none;\n"
+                                        "}\n"
+                                        "\n"
+                                        ".QPushButton:hover{\n"
+                                        "   background: #3cb0fd;\n"
+                                        "   background-image:-webkit-linear-gradient(top, #3cb0fd, #3498db);\n"
+                                        "   background-image:-moz-linear-gradient(top, #3cb0fd, #3498db);\n"
+                                        "   background-image:-ms-linear-gradient(top, #3cb0fd, #3498db);\n"
+                                        "   background-image:-o-linear-gradient(top, #3cb0fd, #3498db);\n"
+                                        "   background-image:linear-gradient(top, #3cb0fd, #3498db);\n"
+                                        "   text-decoration:none;\n"
+                                        "}")
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap(":/img/plus2.png"), QtGui.QIcon.Normal, QtGui.QIcon.State.Off)
+        self.pushButton_2.setIcon(icon2)
+        self.pushButton_2.setIconSize(QtCore.QSize(100, 55))
+        self.pushButton_2.setObjectName("pushButton_2")
+        MainWindow.setCentralWidget(self.centralwidget)
+        # self.statusbar.setObjectName("statusbar")
+        # MainWindow.setStatusBar(self.statusbar)
+        self.retranslateUi(MainWindow)
+        self.pushButton_2.clicked.connect(self.lineEdit.clear)
+        self.pushButton.clicked.connect(self.textBrowser.paste)
+        self.pushButton_2.clicked.connect(self.textBrowser.clear)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "Routh-Hurwitz Calculator"))
+        self.lineEdit.setStatusTip(_translate("MainWindow", "Notes: 1- Use Power By  ^  2- Insert all absolute even 1"))
+        self.lineEdit.setPlaceholderText(_translate("MainWindow", "Enter your characteristic equation"))
+        self.pushButton.setToolTip(_translate("MainWindow", "Press to enter your characteristic EQN"))
+        self.pushButton.setText(_translate("MainWindow", "Enter"))
+        self.pushButton_2.setToolTip(_translate("MainWindow", "Add new one"))
+        self.pushButton_2.setText(_translate("MainWindow", "New"))
+
+
+if __name__ == "__main__":
+    import sys
+
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+
+import sys
+from tabulate import tabulate
+
+m = 0
+sys.setrecursionlimit(10 ** 3)
+
+E1 = []
+ER = []
+Epower = []
+LSigns = []
+ALL = []
+l = []
+M1 = []
+M2 = []
+
+
+def chng():
+    userip = ui.lineEdit.text()
+    if userip.find('+') != -1:
+        up = userip.replace("+", " ").replace("-", "  -").split()
+        up2 = userip.replace("+", "  +").replace("-", "  -").split()
+        # print(g[1])
+        for i in up:
+            if i.find('s') != -1 and i.find('s') != -1:
+                E1.append(int(i[:i.index('s')]))
+                Epower.append(int(i[i.index('^') + 1:]))
+                ER.append(i[i.index('s'):])
+        ER.append('s^0')
+        E1.append(int(up[-1]))
+    print("the absolute limit is {}".format(E1))
+    print("the power is {}".format(Epower))
+    print("s^power is {}".format(ER))
+    print("______________________________________________________")
+    L = [[] for _ in range(len(ER))]
+    L[0] = E1[0::2]
+    L[1] = E1[1::2]
+    x = 0
+    while x < len(L[0]):
+        if len(L[x]) > len(L[x + 1]):
+            L[x + 1].append(0)
+            break
+        elif len(L[x] == len(L[x + 1])):
+            print('no 0 add')
+            break
+        else:
+            L[x].append(0)
+            break
+    q, r, s = 2, 0, 1
+
+    def lp():
+        m = 0
+        ε = 0.001
+        p = []
+        for h in range(len(ER)):
+            while m <= h:
+                for g in range(len(L[0]) - 1):
+                    L[q + m].append(((float(L[r + m][g + 1]) * float(L[s + m][r])) - (
+                            float(L[r + m][r]) * float(L[s + m][g + 1]))) / float(L[s + m][r]))
+                    if g == 1:
+                        if L[q + m][0] == 0 and L[q + m][1] != 0:
+                            L[q + m][0] = ε
+                # if L[q+m][0]==0 and L[q+m][1]!=0:
+                # L[2][0]=ε
+                # pass
+                if L[1 + m][0] == 0 and L[q + m][1] == 0:
+                    # l[m]
+                    p = [n1 * n2 for n1, n2 in zip(L[m + 1], Epower[m + 1::2])]
+                    L[q + m][0] = p[0]
+                    L[q + m][1] = p[1]
+                    lo = up2[m + 1::2]
+                    loToStr1 = ''.join([str(elem) for elem in lo])
+                    if loToStr1[0] == '+':
+                        l.append(loToStr1.replace('+', '', 1))
+                    elif loToStr1[0] == '-':
+                        l.append(loToStr1.replace('-', '', 1))
+
+                if len(L[q + m]) < len(L[0]):
+                    for _ in range(15):
+                        L[q + m].append(0)
+                        if len(L[q + m]) == len(L[0]):
+                            break
+                m += 1
+            if L[s + m][r] == 0 or (m + 2) == len(ER):
+                break
+        print(1)
+
+    lp()
+    if l == []:
+        pass
+    else:
+        FL = l[0]
+        print(FL)
+
+        def diffsquare():
+            if FL[0] != '1':
+                u = FL.replace("+", "  ").replace("-", "  -").split()
+                h = FL.replace("+", "  ").replace("-", "  ").split()
+                sgn = FL.replace("+", "  +").replace("-", "  -").split()
+                y = int(FL[0:FL.index('s')])
+                m = int(int(h[1][:h[1].index('s')]) / y)
+                z = int(int(h[2][0:]) / y)
+                f1p = u[0][u[0].index('^') + 1:]
+                sign2 = sgn[2][0]
+                sign1 = sgn[1][0]
+                # print(FL)
+                if f1p == '4':
+                    if sign2 == '+':
+                        x = 1
+                        while x <= 99:
+                            for y in range(1, 100):
+                                if x * y == z and x + y == m:
+                                    break
+                            if x * y == z and x + y == m:
+                                break
+                            x += 1
+                    else:
+                        x = 1
+                        while x <= 99:
+                            for y in range(1, 100):
+                                if x * y == z and x - y == m:
+                                    break
+                            if x * y == z and x - y == m:
+                                break
+                            x += 1
+                    if sign1 == '+' and sign2 == '-':
+                        on1 = -z
+                        tw2 = y
+                    elif sign1 == '-' and sign2 == '-':
+                        on1 = z
+                        tw2 = -y
+                    else:
+                        on1 = -z
+                        tw2 = -y
+            else:
+                u = FL.replace("+", "  ").replace("-", "  -").split()
+                h = FL.replace("+", "  ").replace("-", "  ").split()
+                sgn = FL.replace("+", "  +").replace("-", "  -").split()
+                y = int(FL[0:FL.index('s')])
+                m = int(h[1][:h[1].index('s')])
+                z = int(h[2][0:])
+                f1p = u[0][u[0].index('^') + 1:]
+                sign2 = sgn[2][0]
+                sign1 = sgn[1][0]
+                # print(m)
+                if f1p == '4':
+                    if sign2 == '+':
+                        x = 1
+                        while x <= 99:
+                            for y in range(1, 13):
+                                if x * y == z and x + y == m:
+                                    break
+                            if x * y == z and x + y == m:
+                                break
+                            x += 1
+                    else:
+                        x = 1
+                        while x <= 99:
+                            for y in range(1, 100):
+                                if x * y == z and x - y == m:
+                                    break
+                            if x * y == z and x - y == m:
+                                break
+                            x += 1
+                    if sign1 == '+' and sign2 == '-':
+                        on1 = -x
+                        tw2 = y
+                    elif sign1 == '-' and sign2 == '-':
+                        on1 = x
+                        tw2 = -y
+                    else:
+                        on1 = x
+                        tw2 = y
+            M1.append(on1)
+            M2.append(tw2)
+            print("from s^4 {} {} ".format(on1, tw2))
+
+        diffsquare()
+
+    def signs():
+        for indx0 in range(len(ER)):
+            if L[indx0][0] < 0:
+                LSigns.append('-')
+            else:
+                LSigns.append('+')
+
+    signs()
+
+    def Table():
+        a1 = [[] for _ in range(len(ER))]
+        for v in range(len(ER)):
+            a1[v].append(ER[v])
+            a1[v].append(L[v])
+            a1[v].append(LSigns[v])
+        mydata = a1
+        headers = ['S', 'Values', 'Sign']
+        ui.textBrowser.append(tabulate(mydata, headers=headers))
+
+    Table()
+
+    def DTRoots():
+        adf = []
+        change = 0
+        still = 0
+        jw = 2
+        W = str(M1)
+        Q = str(M2)
+        for n in range(len(LSigns) - 1):
+            if LSigns[n] != LSigns[n + 1]:
+                change += 1
+                adf.append(change)
+            elif LSigns[n] == LSigns[n + 1] and M1 == [] and M2 == []:
+                still += 1
+                adf.append(still)
+                h = 0
+            elif LSigns[n] == LSigns[n + 1] and M1 != [] and M2 != []:
+                adf.append(still)
+                W = str(M1[0])
+                Q = str(M2[0])
+                # print(Q(0))
+        if W[0] == '+' and Q[0] == '-':
+            still += 1
+            h = jw + 2
+        elif W[0] == '-' and Q[0] != '-' or W[0] != '-' and Q[0] == '-':
+            still += 2
+            h = jw
+        else:
+            pass
+        if (change + still + h) != len(ER) - 1:
+            h += 2
+        ui.textBrowser.append('_____________________________________')
+        if change >= 1:
+            ui.textBrowser.append('system state: system is unstable')
+        elif change == 0 and h >= 1:
+            ui.textBrowser.append('system state: system is marginally stable')
+        elif change == 0 and still >= 1:
+            ui.textBrowser.append('system state: system is stable')
+        ui.textBrowser.append('there are {} poles in RHS, {} in LHS, {} jw axis'.format(change, still, h))
+
+    DTRoots()
+
+
+import os
+
+
+def restart():
+    os.execv(sys.executable, ['python'] + sys.argv)
+
+
+ui.pushButton.clicked.connect(chng)
+ui.pushButton_2.clicked.connect(restart)
+
+sys.exit(app.exec_())
